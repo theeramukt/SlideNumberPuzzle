@@ -11,6 +11,8 @@
 		0425F3712B052099005BD64F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425F3702B052099005BD64F /* ContentView.swift */; };
 		0425F3732B05209A005BD64F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0425F3722B05209A005BD64F /* Assets.xcassets */; };
 		0425F3762B05209A005BD64F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0425F3752B05209A005BD64F /* Preview Assets.xcassets */; };
+		0425F37D2B05214C005BD64F /* SlideNumberPuzzleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425F37C2B05214C005BD64F /* SlideNumberPuzzleViewModel.swift */; };
+		0425F37F2B052176005BD64F /* SlideNumberPuzzleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425F37E2B052176005BD64F /* SlideNumberPuzzleModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		0425F3702B052099005BD64F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0425F3722B05209A005BD64F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0425F3752B05209A005BD64F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0425F37C2B05214C005BD64F /* SlideNumberPuzzleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideNumberPuzzleViewModel.swift; sourceTree = "<group>"; };
+		0425F37E2B052176005BD64F /* SlideNumberPuzzleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideNumberPuzzleModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				0425F36E2B052099005BD64F /* SlideNumberPuzzleApp.swift */,
 				0425F3702B052099005BD64F /* ContentView.swift */,
+				0425F37C2B05214C005BD64F /* SlideNumberPuzzleViewModel.swift */,
+				0425F37E2B052176005BD64F /* SlideNumberPuzzleModel.swift */,
 				0425F3722B05209A005BD64F /* Assets.xcassets */,
 				0425F3742B05209A005BD64F /* Preview Content */,
 			);
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0425F37F2B052176005BD64F /* SlideNumberPuzzleModel.swift in Sources */,
 				0425F3712B052099005BD64F /* ContentView.swift in Sources */,
 				0425F36F2B052099005BD64F /* SlideNumberPuzzleApp.swift in Sources */,
+				0425F37D2B05214C005BD64F /* SlideNumberPuzzleViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
