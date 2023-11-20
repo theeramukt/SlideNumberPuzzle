@@ -5,15 +5,37 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Button("New Game") {
+            Button(action: {
                 viewModel.shuffle()
+            }) {
+                Text("New Game")
+                    .foregroundColor(.green)
+                    .fontWeight(.bold)
+                    .font(.title);
             }
+            
             Spacer()
             ScrollView {
                 cards
                     .animation(.default, value: viewModel.cards)
             }
             Spacer()
+          
+            VStack {
+                Text(viewModel.isWin ? "You Won!!!" : "")
+                    .foregroundColor(.red)
+                    .padding()
+                    .fontWeight(.bold)
+                    .font(.title);
+
+                Text("Moves: \(viewModel.moveCount)")
+                    .foregroundColor(.blue)
+                    .fontWeight(.bold)
+                    .font(.title);
+                
+            }
+            
+
         }
         .padding()
     }
@@ -22,6 +44,9 @@ struct ContentView: View {
         LazyVGrid(columns: [GridItem(.adaptive(minimum: 80))]) {
             ForEach(viewModel.cards) { card in
                 CardView(card: card)
+                    .padding(0.5)
+                    .bold()
+                    
                     .aspectRatio(1, contentMode: .fit)
                     .onTapGesture {
                         viewModel.move(card)
@@ -40,7 +65,7 @@ struct CardView: View {
             let base = RoundedRectangle(cornerRadius: 12)
             Group {
                 base.foregroundColor(.white)
-                base.strokeBorder(lineWidth: 2)
+                base.strokeBorder(lineWidth: 3)
                 Text(card.content).font(.largeTitle)
             }
             .opacity(card.isFaceUp ? 1 : 0)

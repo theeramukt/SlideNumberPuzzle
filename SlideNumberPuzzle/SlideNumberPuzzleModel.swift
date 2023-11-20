@@ -5,14 +5,14 @@ struct SlideNumberPuzzleModel<CardContent> where CardContent: Equatable {
     
     init(numberOfCards: Int, cardContentFactory: (Int) -> CardContent) {
         cards = []
-        for index in 1..<numberOfCards {
+        for index in 0..<numberOfCards {
             cards.append(Card(content: cardContentFactory(index), id: "\(index)"))
         }
-        cards.append(Card(content: cardContentFactory(0), id: "0"))
+        cards.shuffle()
     }
     
     var indexOfTheOneAndOnlyFaceUpCard: Int?
-    var moveCount = 0
+    var _moveCount: Int = 0
     
     mutating func move(_ card: Card) {
            guard let index = cards.firstIndex(where: { $0.id == card.id }),
@@ -48,5 +48,6 @@ struct SlideNumberPuzzleModel<CardContent> where CardContent: Equatable {
         var isMatched = false
         let content: CardContent
         var id: String
+
     }
 }
