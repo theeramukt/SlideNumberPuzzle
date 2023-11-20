@@ -1,4 +1,4 @@
-This Slide Number Puzzle using Swift
+This Slide Number Puzzle using SwiftUI
 
 
 developed by 
